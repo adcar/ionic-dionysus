@@ -1,0 +1,36 @@
+.loading {
+  top: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: var(--ion-color-light);
+
+  height: 80px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.inner-box {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box h1,
+.box span {
+  margin: 0px 20px;
+}

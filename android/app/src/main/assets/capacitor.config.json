@@ -1,0 +1,18 @@
+{
+  "appId": "arg.pirate.dionysus",
+  "appName": "dionysus",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "public",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh",
+  "server": {
+    "url": "http://10.0.0.169:8100",
+    "cleartext": true
+  }
+}
