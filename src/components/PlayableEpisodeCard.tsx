@@ -9,7 +9,6 @@ import {
 } from "@ionic/react";
 import { play, checkmarkCircle, ellipsisVertical } from "ionicons/icons";
 import truncate from "truncate";
-import startPlaying, { getLinksByShow } from "../util/api/filepursuit";
 import Modal from "./Modal";
 import trakt from "../util/api/trakt";
 
@@ -59,8 +58,6 @@ export default function PlayableCard({
       <IonButton
         onClick={async () => {
           setLoading(true);
-          await startPlaying(showName, episode, season, episodeId);
-          setLoading(false);
         }}
         className="show"
         style={
@@ -118,12 +115,6 @@ export default function PlayableCard({
               fill="clear"
               onClick={async () => {
                 setShowModal(true);
-                const newLinks = await getLinksByShow(
-                  showName,
-                  episode,
-                  season
-                );
-                setLinks(newLinks);
               }}
             >
               Choose Source

@@ -3,7 +3,6 @@ import { IonButton, IonIcon, IonLoading } from "@ionic/react";
 import { play, menu } from "ionicons/icons";
 import truncate from "truncate";
 
-import startPlaying, { getLinksByShow } from "../util/api/filepursuit";
 import Modal from "./Modal";
 
 interface IProps {
@@ -40,7 +39,7 @@ export default function PlayableCard({
       <IonButton
         onClick={async () => {
           setLoading(true);
-          await startPlaying(name, episode, season, episodeId);
+  
           setLoading(false);
         }}
         className="show"
@@ -83,8 +82,6 @@ export default function PlayableCard({
         style={{ position: "absolute", top: 20, right: 10 }}
         onClick={async () => {
           setShowModal(true);
-          const newLinks = await getLinksByShow(name, episode, season);
-          setLinks(newLinks);
         }}
       >
         <IonIcon icon={menu} />
