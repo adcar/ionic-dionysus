@@ -7,7 +7,7 @@ const options = {
   redirect_uri: `${
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://ionic-dionysus.pages.dev"
+      : "https://ionic-dionysus.acardosi.dev"
   }/callback/trakt`,
   api_url: null, // defaults to 'https://api.trakt.tv'
   useragent: null, // defaults to 'trakt.tv/<version>'

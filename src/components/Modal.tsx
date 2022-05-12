@@ -1,6 +1,5 @@
 import { IonModal, IonButton, IonSpinner } from "@ionic/react";
 import React, { useContext, useState, useRef } from "react";
-import { playLink } from "../util/api/filepursuit";
 import { basename } from "path";
 import RefContext from "../context";
 interface IProps {
@@ -72,8 +71,7 @@ export default function Modal({
             <button
               onClick={async () => {
                 setLoading(true);
-                await playLink(link, episodeId);
-                setLoading(false);
+                //setLoading(false);
               }}
               key={index}
               style={{
